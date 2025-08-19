@@ -1,0 +1,28 @@
+:root {
+  border-radius: 13;
+  background-color: 242424;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+a:link {
+  color: 3584e4;
+}
+
+a:visited {
+  color: 9141ac;
+}
+
+a:hover {
+  color: 78aeed;
+}
+
+a:active {
+  color: 1a5fb4;
+}
+
+.main {
+  border-radius: 13;
+  background-color: 131313;
+}
