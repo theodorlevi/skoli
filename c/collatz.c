@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 typedef struct {
   int iter;
@@ -36,9 +35,9 @@ Result multiple_iterations(int start) {
   largest.number = 0;
   largest.iter   = 0;
 
-  for(start; 1; start--) {
+  while(start != 1) {
     Result iter_result = iteration(start);
-
+    start--;
     if(iter_result.number > largest.number) {
       largest.number = iter_result.number;
     }
@@ -46,12 +45,13 @@ Result multiple_iterations(int start) {
       largest.iter = iter_result.iter;
     }
   }
+  return largest;
 }
 
 int main() {
   Result result;
 
-  result = multiple_iterations(100);
+  result = multiple_iterations(100000);
 
-  printf("largest number: %d\n largest iteration: %d", result.number, result.iter);
+  printf("largest number: %d\nlargest iteration: %d", result.number, result.iter);
 }

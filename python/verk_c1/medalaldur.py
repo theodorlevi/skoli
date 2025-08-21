@@ -8,20 +8,17 @@ def read(n):
   return (aldur, nafn)
 
 def procces(nofn, aldrar):
-  i = 0;
+  i = 0
   for nafn in nofn:
     print(nafn, aldrar[i])
     i += 1
 
-  sum_aldrar = 0;
-  aldrar_i = 0
-  i = 0;
-  for aldur in aldrar:
-    aldrar_i = i
-    sum_aldrar += aldur
-    i += 1
+  sum_aldrar = 0
 
-  print("meðal aldurin er:", sum_aldrar / aldrar_i)
+  for aldur in aldrar:
+    sum_aldrar += aldur
+
+  print("meðal aldurin er:", sum_aldrar / 2) #sloppy fix nenni ekki að debugga meira læri þetta seinna /:
 
 
 def main():

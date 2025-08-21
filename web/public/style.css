@@ -21,7 +21,7 @@ a:active {
   color: 1a5fb4;
 }
 
-.main {
-  border-radius: 13;
-  background-color: 131313;
+.card {
+  color: 131313;
+  padding: 3em;
 }
