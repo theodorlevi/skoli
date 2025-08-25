@@ -7,7 +7,7 @@ def read(n):
   nafn = input()
   return (aldur, nafn)
 
-def procces(nofn, aldrar):
+def procces(nofn, aldrar, nr_nemendur):
   i = 0
   for nafn in nofn:
     print(nafn, aldrar[i])
@@ -18,17 +18,19 @@ def procces(nofn, aldrar):
   for aldur in aldrar:
     sum_aldrar += aldur
 
-  print("meðal aldurin er:", sum_aldrar / 2) #sloppy fix nenni ekki að debugga meira læri þetta seinna /:
+  print("meðal aldurin er:", sum_aldrar / nr_nemendur) #sloppy fix nenni ekki að debugga meira læri þetta seinna /:
 
 
 def main():
+  nr_nemendur = 2
+
   reads_aldur = []
   reads_nofn = []
-  for i in range(2):
+  for i in range(nr_nemendur):
     aldur, nafn = read(i + 1)
     reads_aldur.append(aldur)
     reads_nofn.append(nafn)
 
-  procces(reads_nofn, reads_aldur)
+  procces(reads_nofn, reads_aldur, nr_nemendur)
 
 main()
