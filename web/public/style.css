@@ -41,3 +41,7 @@ a:active {
   background-color: 242424;
   padding: 1em;
 }
+
+.border_h1 {
+  border: solid 4px red;
+}

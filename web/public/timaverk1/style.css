@@ -1,0 +1,69 @@
+:root {
+  border-radius: 13px;
+}
+
+body {
+  text-align: justify;
+  color: white;
+  background-color: black;
+  max-width: 60rem;
+  min-width: 40rem;
+  margin: auto;
+  line-height: 1.5rem;
+  font-family: sans-serif;
+  border: solid white 2px;
+  padding-top: 3rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+}
+
+img {
+  width: 40%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  float: right;
+  display: block;
+}
+
+article {
+  padding: 1rem;
+}
+
+h4 {
+  padding: 1rem;
+}
+
+a:visited {
+  color: red;
+}
+
+a:link {
+  color: aqua;
+}
+
+a:hover {
+  color: blue;
+}
+
+nav {
+  border: red solid 2px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+section {
+  border: solid white 2px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.byrjunarstafur {
+  float: left;
+  font-size: 3.5rem;
+  margin-top: -1rem;
+}
