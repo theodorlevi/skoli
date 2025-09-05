@@ -9,6 +9,8 @@ def main():
     match val:
         case 1:
             listi()
+        case 2:
+            skraningaform()
 
         case 6:
             return 0
@@ -16,24 +18,24 @@ def main():
 
 
 def listi():
-    tölulisti = []
+    tolulisti = []
     for i in range(60):
-        tölulisti.append(random.randint(10, 99))
+        tolulisti.append(random.randint(10, 99))
 
     print("þú getur:\n1. prentað út listan 10 tölur í línu\n2. prentað út hversu oft talan 15 kemur\n3. prentað út meðaltal talnana\n4. prentað listan í öfugri röð 20 í línu\n5. prenta hversu margar tölur eru á bilinu 50 - 99")
     val = int(input("hvað villtu gera: "))
 
     match val:
         case 1:
-            for i in range(len(tölulisti)):
-                print(tölulisti[i] + " ", end='')
+            for i in range(len(tolulisti)):
+                print(tolulisti[i] + " ", end='')
                 if i % 10 == 0:
                     print("\n", end='')
             print("\n")
 
         case 2:
             total15 = 0
-            for tala in tölulisti:
+            for tala in tolulisti:
                 if tala == 15:
                     total15 += 1
 
@@ -41,25 +43,36 @@ def listi():
 
         case 3:
             total = 0
-            for tala in tölulisti:
+            for tala in tolulisti:
                 total += tala
 
             print(total / 60)
 
         case 4:
-            tölulisti.reverse()
+            tolulisti.reverse()
 
             for i in range(60):
-                print(str(tölulisti[i]) + " ", end='')
+                print(str(tolulisti[i]) + " ", end='')
                 if i % 20 == 0:
                     print("\n", end='')
             print("\n")
         case 5:
             total = 0
-            for tala in tölulisti:
+            for tala in tolulisti:
                 if tala >= 50:
                     total += 1
             print(total)
+
+def skraningaform():
+    nemenda_tal = int(input("hversu margir nemendur?: "))
+    nemenda_nofn = []
+
+    for i in range(nemenda_tal):
+        nemenda_nofn.append(input("sláðu inn nafn nemenda" + str(i) + ": "))
+
+    nemenda_nofn.sort()
+    
+
 
 
 

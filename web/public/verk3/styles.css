@@ -1,0 +1,93 @@
+:root {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  max-width: 80rem;
+  border: white solid 2px;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: justify;
+  margin: auto;
+}
+
+.cols_2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
+.cols_3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+}
+
+.cols_4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 127, 80);
+}
+nav a:link {
+  flex-flow: row;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+nav a:visited {
+  color: rgb(255, 255, 137);
+}
+nav a:active,
+nav a:hover {
+  background-color: brown;
+}
+footer p {
+  text-align: center;
+}
+
+.gulur {
+  background-color: yellow;
+}
+.raudur {
+  background-color: red;
+}
+.graenn {
+  background-color: lime;
+}
+.blar {
+  background-color: cyan;
+}
+
+.row p,
+.col p {
+  display: flex;
+  font-size: 1.2rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-flow: column-reverse;
+  flex-wrap: wrap;
+}
+
+.row div {
+  flex-grow: 1;
+}
