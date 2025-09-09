@@ -64,7 +64,7 @@ def hlaup():
 def mlitrar():
   ml = int(input("hversu margi ml: "))
 
-  print(f"l: {ml * 1000}\ndl: {ml * 100}\nsl: {ml * 10}\nml: {ml}")
+  print(f"l: {ml / 1000}\ndl: {ml / 100}\nsl: {ml / 10}\nml: {ml}")
 
 ###### Margföldun
 def margfoldun():
