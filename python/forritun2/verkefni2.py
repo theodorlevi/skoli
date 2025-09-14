@@ -1,5 +1,7 @@
 #!/bin/python
 
+# ©Theodor Leví Halldórsson 2025
+
 import random
 
 def main():
