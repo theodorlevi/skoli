@@ -1,0 +1,158 @@
+:root {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  max-width: 80rem;
+  border: white solid 2px;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  text-align: justify;
+  margin: auto;
+}
+
+.cols_2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+}
+
+.cols_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cols_4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+}
+
+.rows_2 {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 2rem;
+}
+
+footer p {
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    padding: 1rem;
+}
+
+.verkefni {
+    margin: auto;
+    padding: 1rem;
+}
+
+h1 {
+    margin: auto;
+    padding: 1rem;
+}
+
+.top_nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: blue;
+}
+.top_nav a:link {
+  flex-flow: row;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+.top_nav a:visited {
+  color: rgb(255, 255, 137);
+}
+.top_nav a:active,
+.top_nav a:hover {
+  background-color: brown;
+}
+
+.border {
+    border: white solid 2px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.gulur {
+  background-color: yellow;
+}
+.raudur {
+  background-color: red;
+}
+.graenn {
+  background-color: lime;
+}
+.blar {
+  background-color: cyan;
+}
+
+.bg-grunnur {
+    background-image: linear-gradient(to bottom, red, blue);
+}
+
+.row p,
+.col p {
+  display: flex;
+  font-size: 1.2rem;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-flow: row-reverse;
+  flex-wrap: wrap;
+}
+
+.col {
+  display: flex;
+  flex-flow: column-reverse;
+  flex-wrap: wrap;
+}
+
+.row div {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 48rem) {
+    .cols_4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cols_2 aside {
+        grid-template-columns: 1fr;
+    }
+
+    .cols_3 {
+        grid-template-columns: 1fr 1fr;
+    }
+    .cols_3 > aside:first-of-type { grid-area: aside1; }
+    .cols_3 > section            { grid-area: main;   }
+    .cols_3 > aside:last-of-type { grid-area: aside2; }
+
+    .top_nav {
+        position: fixed;
+        margin-top: auto;
+    }
+}
+
+@media screen and (max-width: 37.5rem) {
+    .cols_4 {
+        grid-template-columns: 1fr;
+    }
+
+    .cols_2 {
+        grid-template-columns: 1fr;
+    }
+    .cols_3 {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "main"
+        "aside1"
+        "aside2";
+    }
+}
